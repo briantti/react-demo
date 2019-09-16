@@ -1,0 +1,178 @@
+@import '../../styles/constant.less';
+//.home-page-root{
+//    min-height: 100vh;
+//    background: #ddd6f3;  /* fallback for old browsers */
+//    //background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+//    //background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//
+//
+//}
+
+.customer-video-wrapper {
+    position: relative;
+    height: 650/@remScale;
+    //height: auto;
+    overflow: hidden;
+    cursor: pointer;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0/@remScale;
+        top: 0/@remScale;
+        right: 0/@remScale;
+        bottom: 0/@remScale;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .img-wrapper {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    @media (max-width: @max4) {
+        height: 600/@remScale;
+    }
+    @media (max-width: @max3) {
+        height: 500/@remScale;
+    }
+    @media (max-width: @max2) {
+        height: 500/@remScale;
+    }
+    @media (max-width: @max1) {
+        height: 350/@remScale;
+    }
+    .switch-pause-content {
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #FFffff;
+        .big-video-top-text {
+            font-size: 32/@remScale;
+        }
+        .big-video-bottom-text {
+            font-size: 32/@remScale;
+            margin-top: 15/@remScale;
+            margin-bottom: 30/@remScale;
+        }
+        .switch-pause-play-wrapper {
+            position: relative;
+            width: 50/@remScale;
+            height: 50/@remScale;
+            border-radius: 80/@remScale;
+            cursor: pointer;
+            border: 3/@remScale solid #FFFFFF;
+            z-index: 2;
+            transition: opacity .1s linear, visibility .3s linear;
+            display: inline-block;
+            &:hover {
+                opacity: .7;
+            }
+            .switch-pause-play {
+                border-top: 15/@remScale solid transparent;
+                border-bottom: 15/@remScale solid transparent;
+                border-right: 0/@remScale;
+                border-left: 16/@remScale solid #FFffff;
+                position: absolute;
+                left: 60%;
+                top: 50%;
+                transform: translate(-60%, -50%);
+            }
+
+        }
+    }
+
+    video::-webkit-media-controls-fullscreen-button {
+
+        display: none;
+
+    }
+
+    video::-webkit-media-controls-load-button {
+
+        display: none;
+
+    }
+
+    video::-webkit-media-controls-panel {
+        width: calc(100% + (50 / @remScale));
+    }
+
+    video::-webkit-media-controls {
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+    .control-wrapper {
+        width: 80%;
+        cursor: pointer;
+        height: 3/@remScale;
+        background-color: #888888;
+        opacity: .8;
+        position: absolute;
+        border-radius: 2/@remScale;
+        bottom: 10/@remScale;
+        left: 50%;
+        transform: translate(-50%, 0);
+        .progress {
+            position: relative;
+            height: 100%;
+            width: 0%;
+            transition: width 0.05s ease;
+            background-color: #FFffff;
+        }
+    }
+
+    .img-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.banner-wrapper{
+    margin: 0 auto;
+    width: 980/@remScale;
+    height: 800/@remScale;
+    position: relative;
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .images-wrap{
+        width: 980/@remScale;
+        height: 800/@remScale;
+        overflow: hidden;
+        position: relative;
+        .nav-ul{
+            display: inline-flex;
+            li{
+            }
+            //position: absolute;
+            //z-index: 1;
+            //width: 7680/@remScale;
+            //height: 800/@remScale;
+            //left: -1280/@remScale;
+        }
+    }
+}

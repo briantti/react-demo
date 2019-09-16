@@ -1,0 +1,120 @@
+/**
+ *  global
+ */
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: @background-color;
+    -webkit-tap-highlight-color: transparent;
+    font-family: PingFang SC, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/*HTML5*/
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
+/*RESET
+-------------------------------------------------------------- */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, hr, pre, code, form, button, fieldset, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+//address,
+//caption,
+//cite,
+//code,
+//dfn,
+//em,
+//strong,
+//th,
+//var {
+//    font-style: normal;
+//    font-weight: normal;
+//}
+ol, ul {
+    list-style: none;
+}
+
+del, ins {
+    text-decoration: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+input, button, textarea, select, li {
+    font-size: 100%;
+    border: none;
+    outline: none;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+addr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup, sub {
+    vertical-align: baseline;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/**
+ *  custom global
+ */
+
+.model-open {
+    overflow: hidden;
+@media (max-width: @max1) {
+        position: fixed;
+        width: 100%;
+    }
+}
+
+.page-view, .page-modal {
+.page-content {
+        min-width: @body-min-width;
+    @media (max-width: @max1) {
+            min-width: 0;
+        }
+    }
+}
+
+.content-overdue {
+    min-height: calc(~"100vh - 2.5rem") !important;
+@media (max-width: @max1) {
+        min-height: 0;
+    }
+}
+
+
